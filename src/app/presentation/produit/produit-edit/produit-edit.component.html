@@ -1,0 +1,18 @@
+ <div class="form-group">
+       <label>id :</label>
+       <input type = "text" disabled="disabled">
+
+       <label>Designation :</label>
+       <input type = "text" [(ngModel)] = "selectedProduct.designation" placeholder="designation"/>
+
+       <label>Prix :</label>
+       <input type = "number" [(ngModel)] = "selectedProduct.prix" placeholder="prix"/>
+
+       <label>Catégorie :</label>
+       <input type = "text"/>
+
+       <!-- utilisation d'un propertie binding -->
+       <button [disabled]="!selectedProduct.designation" (click)="saveProduct(selectedProduct)" class="btn btn-primary"> Save </button>
+        <button (click)="cancelEdit()"> Cancel </button>
+</div>
+
